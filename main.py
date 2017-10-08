@@ -12,9 +12,12 @@ mins = []
 
 
 def get_sheet():
-    wb = openpyxl.load_workbook('1405.xlsx')
-    sheet = wb.get_sheet_by_name(wb.get_sheet_names()[0])
-    return sheet
+    try:
+        wb = openpyxl.load_workbook('1405.xlsx')
+        sheet = wb.get_active_sheet()
+        return sheet
+    except FileNotFoundError:
+        print('Open file error.')
 
 
 def get_all_stu_names(sheet):
@@ -109,4 +112,3 @@ def main():
     out_put()
 
 main()
-pass
