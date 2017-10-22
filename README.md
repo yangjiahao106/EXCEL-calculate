@@ -1,2 +1,3 @@
 # EXCEL-calculate
-# calculate weighten average for xlxs
+# calculate weighten average from xlxs
+# apply for HPU
